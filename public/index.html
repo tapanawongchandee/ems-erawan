@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EMS ERAWAN</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body class="bg-light">
+    <div class="container mt-5">
+        <div class="card shadow p-4 mx-auto" style="max-width: 600px;">
+            <h3 class="text-center text-primary mb-4">🚑 EMS ERAWAN</h3>
+            <form id="shortenForm">
+                <input type="url" class="form-control mb-3" id="longUrl" placeholder="1. วาง URL ต้นทาง (บังคับ)" required>
+                <input type="text" class="form-control mb-3" id="customCode" placeholder="2. ชื่อลิงก์ที่ต้องการ เช่น CPR (ไม่บังคับ)">
+                <input type="number" class="form-control mb-3" id="expiresInDays" placeholder="3. จำนวนวันหมดอายุ (ไม่บังคับ)">
+                <button type="submit" class="btn btn-primary w-100">สร้างลิงก์</button>
+            </form>
+            <div id="resultArea" class="mt-4 p-3 bg-success-subtle rounded" style="display: none;">
+                <input type="text" id="shortUrlResult" class="form-control mb-2" readonly>
+            </div>
+            <div id="errorArea" class="alert alert-danger mt-3 d-none"></div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
