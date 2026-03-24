@@ -27,7 +27,13 @@
             </form>
 
             <div id="resultArea" class="mt-4 p-3 bg-success-subtle rounded" style="display: none;">
-                <input type="text" id="shortUrlResult" class="form-control mb-2" readonly>
+                
+                <div class="input-group">
+                    <input type="text" id="shortUrlResult" class="form-control" readonly>
+                    <button class="btn btn-outline-success" type="button" onclick="copyToClipboard()">คัดลอก</button>
+                </div>
+                
+                <small id="expireText" class="text-danger mt-2 d-block"></small>
                 
                 <div id="qrCodeArea" class="text-center mt-3" style="display: none;">
                     <hr>
