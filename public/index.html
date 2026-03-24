@@ -14,10 +14,21 @@
                 <input type="url" class="form-control mb-3" id="longUrl" placeholder="1. วาง URL ต้นทาง (บังคับ)" required>
                 <input type="text" class="form-control mb-3" id="customCode" placeholder="2. ชื่อลิงก์ที่ต้องการ เช่น ERAWANLINK (ไม่บังคับ)">
                 <input type="number" class="form-control mb-3" id="expiresInDays" placeholder="3. จำนวนวันหมดอายุ (ไม่บังคับ)">
+                <div class="form-check mb-4">
+                                <input class="form-check-input" type="checkbox" id="generateQr" checked>
+                                <label class="form-check-label fw-bold" for="generateQr">
+                                    สร้าง QR Code ด้วย
+                                </label>
+                            </div>
                 <button type="submit" class="btn btn-primary w-100">สร้างลิงก์</button>
             </form>
             <div id="resultArea" class="mt-4 p-3 bg-success-subtle rounded" style="display: none;">
                 <input type="text" id="shortUrlResult" class="form-control mb-2" readonly>
+                <div id="qrCodeArea" class="text-center mt-3" style="display: none;">
+                                <hr>
+                                <p class="fw-bold mb-2">📷 QR Code สำหรับสแกน:</p>
+                                <img id="qrCodeImage" src="" alt="QR Code" class="img-fluid border p-2 bg-white rounded shadow-sm" style="max-width: 200px;">
+                            </div>
             </div>
             <div id="errorArea" class="alert alert-danger mt-3 d-none"></div>
             </div>
